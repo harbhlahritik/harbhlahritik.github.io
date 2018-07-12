@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 hr {
@@ -78,6 +78,10 @@ img::selection {
 img::-moz-selection {
   color: #fff;
   background: transparent;
+}
+
+#fafontsbar {
+  margin-top: 25px;
 }
 
 #mainNav {
@@ -167,10 +171,10 @@ img::-moz-selection {
 }
 
 header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background-image: url("../img/header.jpg");
-  background-position: center center;
+  /* padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px); */
+  background-color: #212529;
+  /* background-position: center center; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
