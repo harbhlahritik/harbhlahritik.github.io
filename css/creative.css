@@ -50,6 +50,11 @@ h6 {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.text-uppercase {
+  padding: 15px;
+  margin-top: 60px;
+}
+
 section {
   padding: 8rem 0;
 }
