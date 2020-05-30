@@ -15,13 +15,15 @@ body {
     display: flex;
 }
 
+/* left image */
+
 .portrait {
     background: url(../img/portrait.png) no-repeat top;
     background-size: cover;
-    /* max-width: 684px;
-    width: 100%; */
     flex: 1;
 }
+
+/* right text */
 
 .content {
     flex: 2;
@@ -45,59 +47,61 @@ body {
 }
 
 .content p {
-    color: #202021;
+    color: #282828;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
 }
+
+/* social section */
 
 .social {
     position: relative;
     top: 32px;
 }
 
-.linkedin {
+/* svg position */
+
+.linkedin,.github, .mail {
     display: inline-block;
     padding-right: 20px;
-}
-
-.github, .mail {
-    display: inline-block;
-    padding: 0 20px;
-}
-
-.resume {
-    display: inline-block;
-    padding-left: 20px;
-    position: relative;
-    top: -42px;
-}
-
-.social img {
     width: 100px;
-    fill: #202021;
+    height: 100px;
 }
 
-#linkedin-img {
-    width: 90px;
-}
+/* Hover for all the svgs */
 
-#linkedin-svg a:hover {
+#linkedin-svg:hover {
     fill: #0e76a8;
+    position: relative;
+    top: -2px;
 }
 
 #github-svg:hover {
     fill: #211F1F;
+    position: relative;
+    top: -2px;
 }
 
 #mail-svg:hover {
-    fill: #D44638;
+    fill: #FE0109;
+    position: relative;
+    top: -2px;
+}
+
+/* resume button */
+
+.resume {
+    display: inline-block;
+    position: relative;
+    top: -34px;
 }
 
 .resume-button {
-    height: 64px;
-    width: 200px;
+    height: 60px;
+    width: 180px;
     font-size: 24px;
     color: white;
-    background-color: #202021;
+    background-color: #282828;
     border: none;
     border-radius: 20px;
     transition: all ease 0.5s;
@@ -106,3 +110,96 @@ body {
 .resume-button:hover {
     background-color: aqua;
 }
+
+/* responsive */
+
+@media screen and (max-width: 880px) {
+
+    .landing-page {
+        flex-direction: column;
+        height: 180vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .portrait{
+        flex: 1;
+    }
+
+    .content {
+        flex: 1;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .content h1 {
+        font-size: 10rem;
+        line-height: 10rem;
+        position: relative;
+        top: -15px;
+    }
+
+    .content h2 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .content p {
+        font-size: 1.3rem;
+        position: relative;
+        top: 10px;
+    }
+
+    /* svgs */
+
+    .linkedin,.github, .mail {
+        width: 64px;
+        height: 64px;
+    }
+
+    /* resume button */
+
+    .resume {
+        top: -18px;
+    }
+    
+    .resume-button {
+        height: 48px;
+        width: 120px;
+        font-size: 1rem;
+        border-radius: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 330px) {
+
+    /* handling iphone5/5s use case */
+
+    .landing-page {
+        height: 200vh;
+    }
+
+    .content h1 {
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+
+    .content h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .resume {
+        top: 10px;
+    }
+
+}
+
+/* Author 2020 @ Haskers | Hritik Harbhla */
